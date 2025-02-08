@@ -16,13 +16,13 @@
 docker run --rm -v $(pwd):/data -t  ghcr.io/terraform-linters/tflint
 ```
 
-![Вопрос1](https://github.com/Markin-AI/ter-04/blob/main/img/1-1.png)
+![Вопрос1](https://github.com/Markin-AI/ter-05/blob/main/img/1-1.png)
 
 ```
 checkov -d ./src || docker run --tty --rm --volume $(pwd):/tf --workdir /tf bridgecrew/checkov --directory /tf
 ```
 
-![Вопрос1](https://github.com/Markin-AI/ter-04/blob/main/img/1-2.png)
+![Вопрос1](https://github.com/Markin-AI/ter-05/blob/main/img/1-2.png)
 
 - из [демо к лекции 4](https://github.com/netology-code/ter-homeworks/tree/main/04/demonstration1).
 
@@ -30,17 +30,17 @@ checkov -d ./src || docker run --tty --rm --volume $(pwd):/tf --workdir /tf brid
 docker run --rm -v $(pwd):/data -t  ghcr.io/terraform-linters/tflint
 ```
 
-![Вопрос1](https://github.com/Markin-AI/ter-04/blob/main/img/1-3.png)
+![Вопрос1](https://github.com/Markin-AI/ter-05/blob/main/img/1-3.png)
 
-![Вопрос1](https://github.com/Markin-AI/ter-04/blob/main/img/1-4.png)
+![Вопрос1](https://github.com/Markin-AI/ter-05/blob/main/img/1-4.png)
 
 ```
 docker run --tty --rm --volume $(pwd):/tf --workdir /tf bridgecrew/checkov --directory /tf
 ```
 
-![Вопрос1](https://github.com/Markin-AI/ter-04/blob/main/img/1-5.png)
+![Вопрос1](https://github.com/Markin-AI/ter-05/blob/main/img/1-5.png)
 
-![Вопрос1](https://github.com/Markin-AI/ter-04/blob/main/img/1-6.png)
+![Вопрос1](https://github.com/Markin-AI/ter-05/blob/main/img/1-6.png)
 
 ---
 
@@ -55,23 +55,23 @@ docker run --tty --rm --volume $(pwd):/tf --workdir /tf bridgecrew/checkov --dir
 
 ## Решение 2
 
-![Вопрос2](https://github.com/Markin-AI/ter-04/blob/main/img/2-1.png)
+![Вопрос2](https://github.com/Markin-AI/ter-05/blob/main/img/2-1.png)
 
-![Вопрос2](https://github.com/Markin-AI/ter-04/blob/main/img/2-2.png)
+![Вопрос2](https://github.com/Markin-AI/ter-05/blob/main/img/2-2.png)
 
-![Вопрос2](https://github.com/Markin-AI/ter-04/blob/main/img/2-3.png)
+![Вопрос2](https://github.com/Markin-AI/ter-05/blob/main/img/2-3.png)
 
-![Вопрос2](https://github.com/Markin-AI/ter-04/blob/main/img/2-4.png)
+![Вопрос2](https://github.com/Markin-AI/ter-05/blob/main/img/2-4.png)
 
-![Вопрос2](https://github.com/Markin-AI/ter-04/blob/main/img/2-5.png)
+![Вопрос2](https://github.com/Markin-AI/ter-05/blob/main/img/2-5.png)
 
-![Вопрос2](https://github.com/Markin-AI/ter-04/blob/main/img/2-6.png)
+![Вопрос2](https://github.com/Markin-AI/ter-05/blob/main/img/2-6.png)
 
 ```
 terraform force-unlock dac119cc-5f39-a776-8035-5a02697437ed
 ```
 
-![Вопрос2](https://github.com/Markin-AI/ter-04/blob/main/img/2-7.png)
+![Вопрос2](https://github.com/Markin-AI/ter-05/blob/main/img/2-7.png)
 
 ---
 
@@ -85,7 +85,7 @@ terraform force-unlock dac119cc-5f39-a776-8035-5a02697437ed
 
 ## Решение 3
 
-[Сслыка на pull-request](https://github.com/Markin-AI/ter-04/pull/1)
+[Сслыка на pull-request](https://github.com/Markin-AI/ter-05/pull/1)
 
 ---
 
@@ -102,12 +102,47 @@ terraform force-unlock dac119cc-5f39-a776-8035-5a02697437ed
 condition = can(regex("^(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]?[0-9])\\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]?[0-9])\\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]?[0-9])\\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]?[0-9])$", var.ip_address))
 ```
 
-![Вопрос4](https://github.com/Markin-AI/ter-04/blob/main/img/4-1.png)
+![Вопрос4](https://github.com/Markin-AI/ter-05/blob/main/img/4-1.png)
 
 ```
 condition = alltrue([for ip in var.ip_address_list: can(regex("^(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]?[0-9])\\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]?[0-9])\\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]?[0-9])\\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9]?[0-9])$", ip))])
 ```
 
-![Вопрос4](https://github.com/Markin-AI/ter-04/blob/main/img/4-2.png)
+![Вопрос4](https://github.com/Markin-AI/ter-05/blob/main/img/4-2.png)
+
+---
+
+### Задание 5*
+1. Напишите переменные с валидацией:
+- type=string, description="любая строка" — проверка, что строка не содержит символов верхнего регистра;
+- type=object — проверка, что одно из значений равно true, а второе false, т. е. не допускается false false и true true:
+```
+variable "in_the_end_there_can_be_only_one" {
+    description="Who is better Connor or Duncan?"
+    type = object({
+        Dunkan = optional(bool)
+        Connor = optional(bool)
+    })
+
+    default = {
+        Dunkan = true
+        Connor = false
+    }
+
+    validation {
+        error_message = "There can be only one MacLeod"
+        condition = <проверка>
+    }
+}
+```
+
+## Решение 5*
+
+```
+condition = var.in_the_end_there_can_be_only_one.Dunkan !=  var.in_the_end_there_can_be_only_one.Connor
+```
+
+![Вопрос5](https://github.com/Markin-AI/ter-05/blob/main/img/5-1.png)
+
 
 ---
