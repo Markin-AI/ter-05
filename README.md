@@ -85,7 +85,7 @@ terraform force-unlock dac119cc-5f39-a776-8035-5a02697437ed
 
 ## Решение 3
 
-[Сслыка на pull-request](https://github.com/Markin-AI/ter-05/pull/1)
+[Сслыка на pull-request](https://github.com/Markin-AI/ter-04/pull/1)
 
 ---
 
